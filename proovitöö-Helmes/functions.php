@@ -83,13 +83,6 @@ function deleteSectors($userID)
     return $conn->query($sql);
 }
 
-function updateUser($name, $terms, $sessionID)
-{
-    global $conn;
-    $sqlUpdateUser = "UPDATE user SET name = '$name', terms = '$terms' WHERE session_id = '$sessionID'";
-    return $conn->query($sqlUpdateUser);
-}
-
 function saveSessionID($sessionID)
 {
     $_SESSION["name"] = $sessionID;
